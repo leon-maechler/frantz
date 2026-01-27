@@ -3,8 +3,9 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { de } from './translations/de';
 import { fr } from './translations/fr';
+import { en } from './translations/en';
 
-type Language = 'de' | 'fr';
+type Language = 'de' | 'fr' | 'en';
 
 interface LanguageContextType {
   language: Language;
@@ -14,15 +15,19 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+const translations = {
+  de,
+  fr,
+  en,
+};
+
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>('de');
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     if (typeof window !== 'undefined') {
       const savedLanguage = localStorage.getItem('language') as Language;
-      if (savedLanguage && (savedLanguage === 'de' || savedLanguage === 'fr')) {
+      if (savedLanguage && ['de', 'fr', 'en'].includes(savedLanguage)) {
         setLanguageState(savedLanguage);
       }
     }
@@ -35,9 +40,9 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const translations = language === 'fr' ? fr : de;
+  const t = translations[language] as typeof de;
 
-  const contextValue = { language, setLanguage, t: translations };
+  const contextValue = { language, setLanguage, t };
 
   return (
     <LanguageContext.Provider value={contextValue}>

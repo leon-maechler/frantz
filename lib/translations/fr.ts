@@ -8,9 +8,8 @@ export const fr = {
     heizungsbau: 'Installation de chauffage',
     heizungsrechner: 'Calculateur de chauffage',
     baeder: 'Salles de bain',
-    gasWasserInstallation: 'Installation gaz-eau',
-    jobs: 'Emplois',
-    ausbildung: 'Formation',
+    gasWasser: 'Gaz & Eau',
+    karriere: 'Carrières',
     kontakt: 'Contact',
   },
   home: {
