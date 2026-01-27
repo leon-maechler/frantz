@@ -1,0 +1,42 @@
+.page {
+  padding: 40px 0;
+  background-color: var(--color-white);
+  min-height: 60vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  color: var(--color-black);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.content {
+  max-width: 900px;
+}
+
+.content p {
+  color: var(--color-black);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 30px 0;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,43 @@
+.contactBar {
+  background-color: var(--color-grey);
+  width: 100%;
+  padding: 8px 0;
+}
+
+.contactContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.address {
+  color: var(--color-white);
+}
+
+.contact {
+  color: var(--color-white);
+}
+
+.contact a {
+  color: var(--color-white);
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+
+.contact a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .contactContent {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    font-size: 12px;
+    padding: 0 15px;
+  }
+}
