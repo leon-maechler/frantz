@@ -4,9 +4,12 @@ import Banner from '@/components/Banner';
 import GoogleMap from '@/components/GoogleMap';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useLanguage } from '@/lib/LanguageContext';
 import styles from './page.module.css';
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <>
       <Banner />
@@ -15,12 +18,12 @@ export default function Home() {
       <section className={styles.servicesSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionTag}>Unsere Leistungen</span>
+            <span className={styles.sectionTag}>{t.home.servicesTag}</span>
             <h2 className={styles.sectionTitle}>
-              Alles aus einer Hand
+              {t.home.servicesTitle}
             </h2>
             <p className={styles.sectionSubtitle}>
-              Wir arbeiten ausschließlich mit geprüften Markenprodukten für langfristige Sicherheit und Zufriedenheit.
+              {t.home.servicesSubtitle}
             </p>
           </div>
           
@@ -29,7 +32,7 @@ export default function Home() {
               <div className={styles.serviceImageWrapper}>
                 <Image
                   src="/images/heizungsbau.png"
-                  alt="Heizungsbau"
+                  alt={t.home.heatingTitle}
                   width={400}
                   height={300}
                   className={styles.serviceImage}
@@ -37,10 +40,10 @@ export default function Home() {
                 <div className={styles.serviceOverlay} />
               </div>
               <div className={styles.serviceContent}>
-                <h3 className={styles.serviceTitle}>Heizungsbau</h3>
-                <p className={styles.serviceDesc}>Effiziente Heizungsanlagen für nachhaltiges Wohnen</p>
+                <h3 className={styles.serviceTitle}>{t.home.heatingTitle}</h3>
+                <p className={styles.serviceDesc}>{t.home.heatingDesc}</p>
                 <span className={styles.serviceLink}>
-                  Mehr erfahren
+                  {t.home.learnMore}
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
@@ -52,7 +55,7 @@ export default function Home() {
               <div className={styles.serviceImageWrapper}>
                 <Image
                   src="/images/gas-wasser.png"
-                  alt="Gas- /Wasserinstallation"
+                  alt={t.home.gasWaterTitle}
                   width={400}
                   height={300}
                   className={styles.serviceImage}
@@ -60,10 +63,10 @@ export default function Home() {
                 <div className={styles.serviceOverlay} />
               </div>
               <div className={styles.serviceContent}>
-                <h3 className={styles.serviceTitle}>Gas & Wasser</h3>
-                <p className={styles.serviceDesc}>Sichere Installation und Wartung Ihrer Leitungen</p>
+                <h3 className={styles.serviceTitle}>{t.home.gasWaterTitle}</h3>
+                <p className={styles.serviceDesc}>{t.home.gasWaterDesc}</p>
                 <span className={styles.serviceLink}>
-                  Mehr erfahren
+                  {t.home.learnMore}
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
@@ -75,7 +78,7 @@ export default function Home() {
               <div className={styles.serviceImageWrapper}>
                 <Image
                   src="/images/baeder.png"
-                  alt="Bäder"
+                  alt={t.home.bathroomTitle}
                   width={400}
                   height={300}
                   className={styles.serviceImage}
@@ -83,10 +86,10 @@ export default function Home() {
                 <div className={styles.serviceOverlay} />
               </div>
               <div className={styles.serviceContent}>
-                <h3 className={styles.serviceTitle}>Bäder</h3>
-                <p className={styles.serviceDesc}>Traumhafte Badezimmer mit 3D-Planung</p>
+                <h3 className={styles.serviceTitle}>{t.home.bathroomTitle}</h3>
+                <p className={styles.serviceDesc}>{t.home.bathroomDesc}</p>
                 <span className={styles.serviceLink}>
-                  Mehr erfahren
+                  {t.home.learnMore}
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
@@ -101,9 +104,9 @@ export default function Home() {
       <section className={styles.whyUsSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionTag}>Warum wir?</span>
+            <span className={styles.sectionTag}>{t.home.whyUsTag}</span>
             <h2 className={styles.sectionTitle}>
-              Kundenservice, der überzeugt
+              {t.home.whyUsTitle}
             </h2>
           </div>
           
@@ -114,9 +117,9 @@ export default function Home() {
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 </svg>
               </div>
-              <h3 className={styles.featureTitle}>Kundendienst</h3>
+              <h3 className={styles.featureTitle}>{t.home.customerService}</h3>
               <p className={styles.featureDesc}>
-                Wartungs- und Reparaturservice für alle von uns installierten Anlagen. Bei dringenden Störfällen auch außerhalb der Geschäftszeiten erreichbar.
+                {t.home.customerServiceDesc}
               </p>
             </div>
             
@@ -126,9 +129,9 @@ export default function Home() {
                   <path d="M20 7h-9M14 17H5M17 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
                 </svg>
               </div>
-              <h3 className={styles.featureTitle}>Ersatzteilservice</h3>
+              <h3 className={styles.featureTitle}>{t.home.sparePartsService}</h3>
               <p className={styles.featureDesc}>
-                Umfangreiches Ersatzteillager mit allen wichtigen Teilen für Heizung und Sanitär. Schnellste Beschaffung garantiert.
+                {t.home.sparePartsDesc}
               </p>
             </div>
             
@@ -138,9 +141,9 @@ export default function Home() {
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                 </svg>
               </div>
-              <h3 className={styles.featureTitle}>Beratung vor Ort</h3>
+              <h3 className={styles.featureTitle}>{t.home.consultation}</h3>
               <p className={styles.featureDesc}>
-                Individuelle Beratung in unserer Ausstellung für Bäder und Heizungsanlagen. Vereinbaren Sie einen Termin.
+                {t.home.consultationDesc}
               </p>
             </div>
           </div>
@@ -151,12 +154,12 @@ export default function Home() {
       <section className={styles.tourSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionTag}>Erleben Sie uns</span>
+            <span className={styles.sectionTag}>{t.home.tourTag}</span>
             <h2 className={styles.sectionTitle}>
-              Virtuelle Tour
+              {t.home.tourTitle}
             </h2>
             <p className={styles.sectionSubtitle}>
-              Entdecken Sie unsere Ausstellung und unser Gebäude in 360°
+              {t.home.tourSubtitle}
             </p>
           </div>
           
@@ -180,7 +183,7 @@ export default function Home() {
                 height="100%"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                title="360° Video Tour"
+                title={t.home.videoTour}
               />
             </div>
           </div>
@@ -192,7 +195,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className={styles.tourLink}
             >
-              360° Außenansicht
+              {t.home.exteriorView}
             </a>
             <a
               href="https://www.google.de/maps/place/K.+Frantz+GmbH/@49.3289459,7.1672649,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipP5panD0_dj774op3po-UooLia5pbiIzcOf4rkP!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipP5panD0_dj774op3po-UooLia5pbiIzcOf4rkP%3Dw203-h135-k-no!7i5625!8i3750!4m5!3m4!1s0x4795c648f68a3243:0x97b37caee89b4faa!8m2!3d49.3289459!4d7.1672649"
@@ -200,7 +203,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className={styles.tourLink}
             >
-              Alle Touren ansehen
+              {t.home.allTours}
             </a>
           </div>
         </div>
@@ -210,9 +213,9 @@ export default function Home() {
       <section className={styles.ctaSection}>
         <div className={styles.container}>
           <div className={styles.ctaContent}>
-            <h2 className={styles.ctaTitle}>Bereit für Ihr Projekt?</h2>
+            <h2 className={styles.ctaTitle}>{t.home.ctaTitle}</h2>
             <p className={styles.ctaSubtitle}>
-              Kontaktieren Sie uns für eine unverbindliche Beratung
+              {t.home.ctaSubtitle}
             </p>
             <div className={styles.ctaButtons}>
               <a href="tel:068218091" className={styles.ctaPrimary}>
@@ -222,7 +225,7 @@ export default function Home() {
                 06821 80 91
               </a>
               <Link href="/kontakt" className={styles.ctaSecondary}>
-                Kontaktformular
+                {t.home.contactForm}
               </Link>
             </div>
           </div>
@@ -233,7 +236,7 @@ export default function Home() {
       <section className={styles.mapSection}>
         <div className={styles.container}>
           <div className={styles.mapHeader}>
-            <h2 className={styles.mapTitle}>Besuchen Sie uns</h2>
+            <h2 className={styles.mapTitle}>{t.home.visitUs}</h2>
             <p className={styles.mapAddress}>
               Spieser Straße 119, 66538 Neunkirchen
             </p>
@@ -241,7 +244,7 @@ export default function Home() {
           <GoogleMap />
           <div className={styles.openingHours}>
             <p>
-              <strong>Öffnungszeiten:</strong> Mo – Do 09:00 – 12:00 & 14:00 – 17:00 Uhr | Fr 09:00 – 12:00 & 14:00 – 16:00 Uhr | Sa nach Vereinbarung
+              <strong>{t.home.openingHours}:</strong> {t.home.openingHoursText}
             </p>
           </div>
         </div>

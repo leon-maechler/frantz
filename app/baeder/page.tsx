@@ -13,7 +13,7 @@ export default function Baeder() {
         <div className={styles.heroBackground}>
           <Image
             src="/images/baeder-header.png"
-            alt="Badausstellung"
+            alt={t.baeder.heroAlt}
             fill
             priority
             className={styles.heroImage}
@@ -21,10 +21,10 @@ export default function Baeder() {
           <div className={styles.heroOverlay} />
         </div>
         <div className={styles.heroContent}>
-          <span className={styles.heroTag}>Unsere Leistungen</span>
-          <h1 className={styles.heroTitle}>{t.nav.baeder}</h1>
+          <span className={styles.heroTag}>{t.home.servicesTag}</span>
+          <h1 className={styles.heroTitle}>{t.baeder.title}</h1>
           <p className={styles.heroSubtitle}>
-            Traumhafte Badezimmer mit individueller Planung und 3D-Visualisierung
+            {t.baeder.subtitle}
           </p>
         </div>
       </section>
@@ -34,15 +34,15 @@ export default function Baeder() {
           <div className={styles.contentGrid}>
             <div className={styles.mainContent}>
               <p className={styles.paragraph}>
-                Inspirationen fürs Bad erhalten Sie in unserer Ausstellung, wo Sie Musterbäder, Accessoires und vieles mehr finden, was Ihr Bad zum absoluten Wohlfühlraum macht.
+                {t.baeder.intro1}
               </p>
               
               <p className={styles.paragraph}>
-                Wichtig ist, dass hervorragendes Design, Pflegeleichtigkeit und Sicherheit immer gewährleistet sind. Dies wird mit dem Einsatz innovativer und hochwertiger Markenprodukte sowie durch individuelle Planung und kompetenten Einbau gewährleistet.
+                {t.baeder.intro2}
               </p>
               
               <p className={styles.paragraph}>
-                Übrigens sehen Sie Ihr Traumbad durch 3-D-Badplanungseinsatz bereits vor der Ausführung aus allen Perspektiven und können sich so das Ergebnis besser vorstellen. Der nächste Schritt ist dann ein Ortstermin bei Ihnen zu Hause, um eine konkrete Planung und Beratung durchzuführen.
+                {t.baeder.intro3}
               </p>
             </div>
           </div>
@@ -52,9 +52,9 @@ export default function Baeder() {
       <section className={styles.tourSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionTag}>360° Erlebnis</span>
-            <h2 className={styles.sectionTitle}>Virtuelle Tour</h2>
-            <p className={styles.sectionSubtitle}>Entdecken Sie unsere Ausstellung digital</p>
+            <span className={styles.sectionTag}>{t.baeder.tourTag}</span>
+            <h2 className={styles.sectionTitle}>{t.baeder.tourTitle}</h2>
+            <p className={styles.sectionSubtitle}>{t.baeder.tourSubtitle}</p>
           </div>
           
           <div className={styles.tourGrid}>
@@ -77,7 +77,7 @@ export default function Baeder() {
                 height="100%"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                title="360° Video Tour"
+                title={t.baeder.videoTour}
               />
             </div>
           </div>
@@ -88,9 +88,9 @@ export default function Baeder() {
         <div className={styles.container}>
           <div className={styles.contactCard}>
             <div className={styles.contactInfo}>
-              <p className={styles.contactTitle}>Ihre Ansprechpartnerin</p>
-              <h3 className={styles.contactName}>Dipl. Ing. (FH) Ulrike Frantz-Fuchs</h3>
-              <p className={styles.contactRole}>Koordiniert alle Gewerke für Ihr Traumbad</p>
+              <p className={styles.contactTitle}>{t.baeder.contactTitle}</p>
+              <h3 className={styles.contactName}>{t.baeder.contactName}</h3>
+              <p className={styles.contactRole}>{t.baeder.contactRole}</p>
               
               <div className={styles.contactDetails}>
                 <a href="mailto:u.frantz-fuchs@frantz-gmbh.de" className={styles.contactLink}>
@@ -110,15 +110,15 @@ export default function Baeder() {
             </div>
             
             <div className={styles.exhibitionInfo}>
-              <h4 className={styles.exhibitionTitle}>Unsere Ausstellung</h4>
+              <h4 className={styles.exhibitionTitle}>{t.baeder.exhibitionTitle}</h4>
               <p className={styles.exhibitionAddress}>
                 Spieser Straße 119<br/>
                 66538 Neunkirchen
               </p>
               <div className={styles.exhibitionHours}>
-                <p><strong>Mo – Do:</strong> 09:00 – 12:00 & 14:00 – 17:00</p>
-                <p><strong>Fr:</strong> 09:00 – 12:00 & 14:00 – 16:00</p>
-                <p><strong>Sa:</strong> nach Vereinbarung</p>
+                <p><strong>{t.baeder.monThu}</strong> {t.baeder.monThuHours}</p>
+                <p><strong>{t.baeder.fri}</strong> {t.baeder.friHours}</p>
+                <p><strong>{t.baeder.sat}</strong> {t.baeder.satHours}</p>
               </div>
             </div>
           </div>
@@ -128,13 +128,13 @@ export default function Baeder() {
       <section className={styles.partnersSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionTag}>Qualität</span>
-            <h2 className={styles.sectionTitle}>Unsere Markenpartner</h2>
+            <span className={styles.sectionTag}>{t.baeder.partnersTag}</span>
+            <h2 className={styles.sectionTitle}>{t.baeder.partnersTitle}</h2>
           </div>
           <div className={styles.logosWrapper}>
             <Image
               src="/images/baeder-logos.png"
-              alt="Unsere Markenpartner"
+              alt={t.baeder.partnersTitle}
               width={1200}
               height={300}
               className={styles.logosImage}

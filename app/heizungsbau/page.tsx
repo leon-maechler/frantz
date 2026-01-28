@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useLanguage } from '@/lib/LanguageContext';
 import styles from './page.module.css';
 
@@ -11,10 +10,10 @@ export default function Heizungsbau() {
     <div className={styles.page}>
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <span className={styles.heroTag}>Unsere Leistungen</span>
+          <span className={styles.heroTag}>{t.home.servicesTag}</span>
           <h1 className={styles.heroTitle}>{t.heizungsbau.title}</h1>
           <p className={styles.heroSubtitle}>
-            Effiziente Heizungsanlagen für nachhaltiges Wohnen und eine bessere Umwelt
+            {t.heizungsbau.subtitle}
           </p>
         </div>
       </section>
@@ -42,7 +41,7 @@ export default function Heizungsbau() {
       <section className={styles.rentalSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionTag}>Neu</span>
+            <span className={styles.sectionTag}>{t.heizungsbau.neu}</span>
             <h2 className={styles.sectionTitle}>{t.heizungsbau.neuMieten}</h2>
           </div>
           

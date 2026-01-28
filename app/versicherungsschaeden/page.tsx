@@ -10,10 +10,10 @@ export default function Versicherungsschaeden() {
     <div className={styles.page}>
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <span className={styles.heroTag}>Hilfe im Schadensfall</span>
+          <span className={styles.heroTag}>{t.versicherungsschaeden.title}</span>
           <h1 className={styles.heroTitle}>{t.versicherungsschaeden.title}</h1>
           <p className={styles.heroSubtitle}>
-            Professionelle Unterstützung bei Blitz-, Überspannungs- und Wasserschäden
+            {t.versicherungsschaeden.heroSubtitle}
           </p>
         </div>
       </section>
@@ -35,7 +35,7 @@ export default function Versicherungsschaeden() {
       <section className={styles.technicalSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionTag}>Fachinfo</span>
+            <span className={styles.sectionTag}>{t.versicherungsschaeden.technischeEmpfehlung}</span>
             <h2 className={styles.sectionTitle}>{t.versicherungsschaeden.technischeEmpfehlung}</h2>
           </div>
           

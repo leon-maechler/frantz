@@ -13,7 +13,7 @@ export default function GasWasserInstallation() {
         <div className={styles.heroBackground}>
           <Image
             src="/images/gas-wasser-header.png"
-            alt="Gas-Wasser-Installation"
+            alt={t.gasWasser.heroAlt}
             fill
             priority
             className={styles.heroImage}
@@ -21,10 +21,10 @@ export default function GasWasserInstallation() {
           <div className={styles.heroOverlay} />
         </div>
         <div className={styles.heroContent}>
-          <span className={styles.heroTag}>Unsere Leistungen</span>
-          <h1 className={styles.heroTitle}>Gas & Wasser</h1>
+          <span className={styles.heroTag}>{t.home.servicesTag}</span>
+          <h1 className={styles.heroTitle}>{t.gasWasser.title}</h1>
           <p className={styles.heroSubtitle}>
-            Sichere Versorgung mit frischem Trinkwasser und zuverlässige Gasinstallation
+            {t.gasWasser.subtitle}
           </p>
         </div>
       </section>
@@ -33,7 +33,7 @@ export default function GasWasserInstallation() {
         <div className={styles.container}>
           <div className={styles.introText}>
             <p className={styles.paragraph}>
-              Wasser ist unser Lebensmittel Nummer eins. Eine sichere Versorgung mit frischem Trinkwasser ist deshalb ein absolutes Muss, egal ob im Neubau oder in der Renovierung.
+              {t.gasWasser.intro}
             </p>
           </div>
           
@@ -44,8 +44,8 @@ export default function GasWasserInstallation() {
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 </svg>
               </div>
-              <h3 className={styles.serviceTitle}>Zertifizierter Fachbetrieb</h3>
-              <p className={styles.serviceDesc}>Zugelassen nach Wasserrecht §62 AwSV</p>
+              <h3 className={styles.serviceTitle}>{t.gasWasser.certifiedTitle}</h3>
+              <p className={styles.serviceDesc}>{t.gasWasser.certifiedDesc}</p>
             </div>
             
             <div className={styles.serviceCard}>
@@ -54,8 +54,8 @@ export default function GasWasserInstallation() {
                   <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
                 </svg>
               </div>
-              <h3 className={styles.serviceTitle}>Reparaturen</h3>
-              <p className={styles.serviceDesc}>Rohrleitungs- und Gasleitungsschäden</p>
+              <h3 className={styles.serviceTitle}>{t.gasWasser.repairsTitle}</h3>
+              <p className={styles.serviceDesc}>{t.gasWasser.repairsDesc}</p>
             </div>
             
             <div className={styles.serviceCard}>
@@ -65,8 +65,8 @@ export default function GasWasserInstallation() {
                   <path d="M12 6v6l4 2"/>
                 </svg>
               </div>
-              <h3 className={styles.serviceTitle}>Neuinstallation</h3>
-              <p className={styles.serviceDesc}>Änderungen und Neuerungen von Rohrleitungen</p>
+              <h3 className={styles.serviceTitle}>{t.gasWasser.installationTitle}</h3>
+              <p className={styles.serviceDesc}>{t.gasWasser.installationDesc}</p>
             </div>
             
             <div className={styles.serviceCard}>
@@ -76,8 +76,8 @@ export default function GasWasserInstallation() {
                   <path d="M3 9h18M9 21V9"/>
                 </svg>
               </div>
-              <h3 className={styles.serviceTitle}>Zählereinbau</h3>
-              <p className={styles.serviceDesc}>Wasser- und Wärmemengenzähler</p>
+              <h3 className={styles.serviceTitle}>{t.gasWasser.meterTitle}</h3>
+              <p className={styles.serviceDesc}>{t.gasWasser.meterDesc}</p>
             </div>
             
             <div className={styles.serviceCard}>
@@ -87,8 +87,8 @@ export default function GasWasserInstallation() {
                   <polyline points="22 4 12 14.01 9 11.01"/>
                 </svg>
               </div>
-              <h3 className={styles.serviceTitle}>Qualität</h3>
-              <p className={styles.serviceDesc}>Nur hochwertige, geprüfte Materialien</p>
+              <h3 className={styles.serviceTitle}>{t.gasWasser.qualityTitle}</h3>
+              <p className={styles.serviceDesc}>{t.gasWasser.qualityDesc}</p>
             </div>
           </div>
         </div>
@@ -98,11 +98,11 @@ export default function GasWasserInstallation() {
         <div className={styles.container}>
           <div className={styles.contactCard}>
             <div className={styles.contactInfo}>
-              <p className={styles.contactTitle}>Ihr Ansprechpartner</p>
+              <p className={styles.contactTitle}>{t.gasWasser.contactTitle}</p>
               <h3 className={styles.contactName}>Andrej Maier</h3>
-              <p className={styles.contactRole}>Geschäftsführung</p>
-              <p className={styles.contactRole}>Installations- & Heizungsbaumeister</p>
-              <p className={styles.contactRole}>geprüfter Energieberater (HWK)</p>
+              <p className={styles.contactRole}>{t.gasWasser.contactRole}</p>
+              <p className={styles.contactRole}>{t.gasWasser.contactRole2}</p>
+              <p className={styles.contactRole}>{t.gasWasser.contactRole3}</p>
               
               <div className={styles.contactDetails}>
                 <a href="mailto:a.maier@frantz-gmbh.de" className={styles.contactLink}>
@@ -127,13 +127,13 @@ export default function GasWasserInstallation() {
       <section className={styles.partnersSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionTag}>Qualität</span>
-            <h2 className={styles.sectionTitle}>Unsere Partner</h2>
+            <span className={styles.sectionTag}>{t.gasWasser.partnersTag}</span>
+            <h2 className={styles.sectionTitle}>{t.gasWasser.partnersTitle}</h2>
           </div>
           <div className={styles.logosWrapper}>
             <Image
               src="/images/gas-wasser-logos.png"
-              alt="Unsere Partner"
+              alt={t.gasWasser.partnersTitle}
               width={1200}
               height={150}
               className={styles.logosImage}

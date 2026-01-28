@@ -10,10 +10,10 @@ export default function Kontakt() {
     <div className={styles.page}>
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <span className={styles.heroTag}>Kontakt</span>
-          <h1 className={styles.heroTitle}>Sprechen Sie mit uns</h1>
+          <span className={styles.heroTag}>{t.kontakt.title}</span>
+          <h1 className={styles.heroTitle}>{t.kontakt.title}</h1>
           <p className={styles.heroSubtitle}>
-            Wir freuen uns auf Ihre Anfrage und beraten Sie gerne persönlich
+            {t.kontakt.heroSubtitle}
           </p>
         </div>
       </section>
@@ -28,7 +28,7 @@ export default function Kontakt() {
                   <circle cx="12" cy="10" r="3"/>
                 </svg>
               </div>
-              <h3 className={styles.cardTitle}>Adresse</h3>
+              <h3 className={styles.cardTitle}>{t.kontakt.address}</h3>
               <div className={styles.cardContent}>
                 <p>K. Frantz GmbH</p>
                 <p>Spieser Str. 119</p>
@@ -42,10 +42,10 @@ export default function Kontakt() {
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                 </svg>
               </div>
-              <h3 className={styles.cardTitle}>Telefon</h3>
+              <h3 className={styles.cardTitle}>{t.kontakt.phone}</h3>
               <div className={styles.cardContent}>
                 <a href="tel:068218091" className={styles.contactLink}>06821-8091</a>
-                <p className={styles.note}>Termine, Auftragsannahme,<br/>Wartungs- und Reparaturannahme</p>
+                <p className={styles.note}>{t.kontakt.appointmentsNote}</p>
               </div>
             </div>
             
@@ -56,28 +56,28 @@ export default function Kontakt() {
                   <polyline points="22,6 12,13 2,6"/>
                 </svg>
               </div>
-              <h3 className={styles.cardTitle}>E-Mail</h3>
+              <h3 className={styles.cardTitle}>{t.kontakt.email}</h3>
               <div className={styles.cardContent}>
                 <a href="mailto:info@frantz-gmbh.de" className={styles.contactLink}>info@frantz-gmbh.de</a>
-                <p className={styles.note}>Wir antworten innerhalb von 24 Stunden</p>
+                <p className={styles.note}>{t.kontakt.responseNote}</p>
               </div>
             </div>
           </div>
           
           <div className={styles.hoursCard}>
-            <h3 className={styles.hoursTitle}>Öffnungszeiten</h3>
+            <h3 className={styles.hoursTitle}>{t.kontakt.openingHours}</h3>
             <div className={styles.hoursGrid}>
               <div className={styles.hoursRow}>
-                <span className={styles.day}>Montag – Donnerstag</span>
-                <span className={styles.time}>09:00 – 12:00 & 14:00 – 17:00 Uhr</span>
+                <span className={styles.day}>{t.kontakt.monThu}</span>
+                <span className={styles.time}>09:00 – 12:00 & 14:00 – 17:00</span>
               </div>
               <div className={styles.hoursRow}>
-                <span className={styles.day}>Freitag</span>
-                <span className={styles.time}>09:00 – 12:00 & 14:00 – 16:00 Uhr</span>
+                <span className={styles.day}>{t.kontakt.fri}</span>
+                <span className={styles.time}>09:00 – 12:00 & 14:00 – 16:00</span>
               </div>
               <div className={styles.hoursRow}>
-                <span className={styles.day}>Samstag</span>
-                <span className={styles.time}>nach Vereinbarung</span>
+                <span className={styles.day}>{t.kontakt.sat}</span>
+                <span className={styles.time}>{t.kontakt.byAppointment}</span>
               </div>
             </div>
           </div>
